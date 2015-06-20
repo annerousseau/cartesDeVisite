@@ -1,0 +1,108 @@
+% =========================================================================
+% File Name: c.tex
+% Last Modification Date: %G%     %U%
+% Current Version: %M%    %I%
+% File Creation Date: Sat Apr 20 22:52:24 1996
+% Author: Jan Erik Odegard  <odegard@ece.rice.edu>
+%
+% Copyright: All software, documentation, and related files in this
+%            distribution are Copyright (c) 1996  Rice University
+% =========================================================================
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+
+% Francisation des textes
+% http://en.wikibooks.org/wiki/LaTeX/Internationalization#Babel
+% -------------------------------------------------------------
+\usepackage[francais]{babel}
+\usepackage[T1]{fontenc}		% Permet de taper des accents
+
+% Plus belles polices vectorielles que computer roman
+% http://www.tug.dk/FontCatalogue/lmodern/
+% -------------------------------------------------------------
+\usepackage{lmodern}
+
+% Permet d'avoir des couleurs
+% usenames et dvipsnames pour noms prédéfinis
+% http://www.ctan.org/pkg/xcolor
+% -------------------------------------------------------------
+\usepackage[usenames,dvipsnames,table]{xcolor} 
+
+\usepackage{graphicx}
+
+\usepackage{latexsym}
+
+\pagestyle{empty}
+\setlength{\textwidth}{8in}
+\setlength{\oddsidemargin}{-1in}
+\setlength{\evensidemargin}{-1in}
+\setlength{\textheight}{10in}
+\setlength{\topmargin}{-1in}
+
+%TODO 
+\newcommand{\clogo}{\includegraphics[width=1.5cm]{./logo-esi.jpg}}
+
+%
+% EDIT THE FOLLOWING VARIABLES
+%
+\newcommand{\cname}{Nicolas \textsc{Pettiaux}}
+\newcommand{\ctitlea}{Maitre-assistant}
+\newcommand{\ctitleb}{}
+\newcommand{\ctitlec}{}
+\newcommand{\cadra}{École supérieure d'informatique}
+\newcommand{\cadrb}{Rue Royale 67}
+\newcommand{\cadrc}{B-1000 Bruxelles}
+\newcommand{\cadrd}{Belgique}
+\newcommand{\cphone}{+32-496-24-55-01}
+%\newcommand{\cfax}{713-524-5237}
+\newcommand{\cemail}{npettiaux@heb.be}
+\newcommand{\curla}{heb.be/esi}
+%\newcommand{\gpgkey}{9FE6 D4AB 9D88 69B2 D4FA  540F DE80 3935 DE0D 3B3F}
+\newcommand{\gpgkey}{2048r/de0d 3b3f}
+
+%\newcommand{\curla}{http:$/\!/$heb.be/esi}
+\begin{document}
+\setlength{\unitlength}{1mm}
+\begin{picture}(200,250)(-7,0)
+  \multiput(0,0)(0,50){5}{%
+    \multiput(0,0)(95,0){2}{
+      \begin{picture}(89,51)(0,0)
+        \put(0,52){\line(0,1){3}}
+        \put(-1,51){\line(-1,0){3}}
+        \put(89,52){\line(0,1){3}}
+        \put(90,51){\line(1,0){3}}
+%        \put(3,48){\line(1,0){83}}  % ligne supérieure
+
+        \put(35,35){\large\cname}
+        \put(35,31){\textsc{\scriptsize\ctitlea}}
+
+        \put(35,27){\scriptsize \cadra}
+        \put(35,24){\scriptsize \cadrb}
+        \put(35,21){\scriptsize \cadrc}
+        \put(35,18){\scriptsize \cadrd}
+        
+        \put(35,14){\textsc{\scriptsize Tél}}
+        \put(46,14){\scriptsize \cphone}
+        
+        \put(35,11){\textsc{\scriptsize Émail}}
+        \put(46,11){\scriptsize \cemail}
+        
+        \put(35,8){\textsc{\scriptsize Web}}
+        \put(46,8){\scriptsize \curla}
+
+        \put(35,5){\textsc{\scriptsize Gpg}}
+        \put(46,5){\textsc {\scriptsize \gpgkey}}
+
+        \put(7,10){\clogo}        
+        
+%        \put(3,3){\line(1,0){83}}   % ligne inférieure
+        \put(0,-1){\line(0,-1){3}}
+        \put(-1,0){\line(-1,0){3}}
+        \put(89,-1){\line(0,-1){3}}
+        \put(90,0){\line(1,0){3}}
+      \end{picture}}}
+\end{picture}
+\end{document}
+
+
